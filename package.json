@@ -1,0 +1,18 @@
+{
+    "name": "xmlslicer",
+    "description": "Advanced XML Splitting and JSON conversion tools",
+    "main": "./index",
+    "author": "Damon Oehlman",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/DamonOehlman/xmlslicer.git"
+    },
+    "bugs": {
+        "web": "https://github.com/DamonOehlman/xmlslicer/issues"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://github.com/DamonOehlman/xmlslicer/raw/LICENCE"
+    }]
+}
