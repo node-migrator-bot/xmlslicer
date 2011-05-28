@@ -20,10 +20,10 @@ slicer = xmlslicer.run({
     }
 });
 
-slicer.on('item', function(index, xmlDoc, opData) {
+slicer.on('item', function(index, xmlDoc, itemData) {
 });
 
-slicer.on('parsed', function(index, xmlDoc, opData) {
+slicer.on('parsed', function(index, xmlDoc, itemData) {
 });
 
 slicer.on('parseError', function(message) {
