@@ -6,11 +6,43 @@ Using [libxmljs](https://github.com/polotek/libxmljs) as the core XML processing
 
 ## Installing
 
-To be completed
+For the moment, you are probably best cloning this repository into the `node_modules` directory of a project that you want to use it in.  I'll eventually get around to adding it to npm, promise...
 
 ## Example Use
 
-To be completed
+```js
+var xmlslicer = require('xmlslicer'),
+    slicer;
+    
+slicer = xmlslicer.run({
+    type: 'typeName',
+    file: 'where/your/xml/lives.xml',
+    regex: /\<Item(.|\n|\r)*?\<\/Item\>/i,
+    idExpr: '@ItemID',
+
+    template: {
+        id: '@ItemID',
+        name: 'req://Item/@Name',
+        description: '//Item/Description',
+
+        // initialise the position
+        pos: {
+            lat: 'float://Item/@Latitude',
+            lon: 'float://Item/@Longitude'
+        }
+    }
+});
+
+slicer.on('item', function(index, xmlDoc, opData) {
+});
+
+slicer.on('parsed', function(index, xmlDoc, opData) {
+});
+
+slicer.on('parseError', function(message) {
+    console.log(message);
+});
+```
 
 ## Custom Expressions and Lookups
 
