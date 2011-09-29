@@ -3,7 +3,14 @@
     "description": "Advanced XML Splitting and JSON conversion tools",
     "main": "./index",
     "author": "Damon Oehlman",
-    "version": "0.1.0",
+    "version": "0.0.1",
+    
+    "engines": { "node": "0.4.x || 0.5.x" },
+    
+    "dependencies": {
+        "libxmljs": "0.4.x"
+    },    
+    
     "repository": {
         "type": "git",
         "url": "http://github.com/DamonOehlman/xmlslicer.git"
